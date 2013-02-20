@@ -7,7 +7,7 @@ function getattn() {
    $("#result").html(""); 
     $("#details").html(""); 
 var usn=document.getElementById("usn");
-$.getJSON('data.php?usn=1pe09cs059', function(data) {
+$.getJSON('data.php?usn='+usn.value, function(data) {
   var items = [];
     var items2 = [];
   items.push('<table border=1>');
