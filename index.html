@@ -31,9 +31,17 @@ $.getJSON('data.php?usn='+usn.value, function(data) {
    
 }
 else {
-if(val.percent > 85 )
+if(val.percent >= 85 )
 {
     items.push('<p class="text-success"><tr><td align=center>'+key+'</td><td align=center>'+val.attn+'</td><td align=center>'+val.total+'</td><td align=center>'+val.percent+'%</td></tr></p>');
+}
+else if(val.percent >=60 && val.percent <85)
+{
+ items.push('<p class="text-warning"><tr><td align=center>'+key+'</td><td align=center>'+val.attn+'</td><td align=center>'+val.total+'</td><td align=center>'+val.percent+'%</td></tr></p>');
+}
+else
+{
+ items.push('<p class="text-error"><tr><td align=center>'+key+'</td><td align=center>'+val.attn+'</td><td align=center>'+val.total+'</td><td align=center>'+val.percent+'%</td></tr></p>');
 }
 }
 
