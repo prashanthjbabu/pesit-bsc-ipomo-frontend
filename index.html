@@ -26,6 +26,7 @@ $.getJSON('data.php?usn='+usn.value, function(data) {
   $.each(data, function(key, val) {
   if (val instanceof Object == false) {
   key=key.toUpperCase();
+    val=val.toUpperCase();
     items2.push('<b>'+key+'</b> : '+val+'<br>');
    
 }
