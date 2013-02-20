@@ -3,8 +3,8 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script>
 function getattn() {
+  $("#loading").show();
 var usn=document.getElementById("usn");
-alert(usn.value);
 $.getJSON('data.php?usn=1pe09cs059', function(data) {
   var items = [];
     var items2 = [];
@@ -20,6 +20,7 @@ else {
 }
 
   });
+    $("#loading").hide();
    $("#result").html(items.join('')); 
     $("#details").html(items2.join('')); 
 });	
@@ -30,6 +31,10 @@ else {
 USN : <input type="text" name="usn" id="usn"><br>
 <input type="button" value="GET ATTENDANCE"name="submit" id="submit" onclick="getattn()">
 </form>
+<div id="loading" >
+    Fetching Your Attendance.. Please Wait....
+    <img src="ajax-loader.gif" alt="Loading" />
+</div>
 <span id=details> </span>
 <span id=result> </span>
 </body>
