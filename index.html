@@ -21,7 +21,7 @@ var usn=document.getElementById("usn");
 $.getJSON('data.php?usn='+usn.value, function(data) {
   var items = [];
     var items2 = [];
-  items.push('<table class="table" border=1>');
+  items.push('<table class="table" align="center" border=1>');
   items.push('<tr><th>Subject</th><th>Attended</th><th>Total</th><th>Percentage</th></tr>');
   $.each(data, function(key, val) {
   if (val instanceof Object == false) {
