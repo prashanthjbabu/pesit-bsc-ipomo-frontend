@@ -13,6 +13,7 @@ $.getJSON('data.php?usn='+usn.value, function(data) {
   $.each(data, function(key, val) {
   if (val instanceof Object == false) {
     items2.push('<b>'+key+'</b> : '+val+'<br>');
+    alert(val);
 }
 else {
     items.push('<tr><td>'+key+'</td><td>'+val.attn+'</td><td>'+val.total+'</td><td>'+val.percent+'</td></tr>');
