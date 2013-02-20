@@ -37,11 +37,11 @@ if(val.percent >= 85 )
 }
 else if(val.percent >=60 && val.percent <85)
 {
- items.push('<p class="text-warning"><tr><td align=center>'+key+'</td><td align=center>'+val.attn+'</td><td align=center>'+val.total+'</td><td align=center>'+val.percent+'%</td></tr></p>');
+ items.push('<tr><td align=center><p class="text-warning">'+key+'</p></td><td align=center><p class="text-warning">'+val.attn+'</p></td><td align=center><p class="text-warning">'+val.total+'</p></td><td align=center><p class="text-warning">'+val.percent+'%</p></td></tr>');
 }
 else
 {
- items.push('<p class="text-error"><tr><td align=center>'+key+'</td><td align=center>'+val.attn+'</td><td align=center>'+val.total+'</td><td align=center>'+val.percent+'%</td></tr></p>');
+ items.push('<tr><td align=center><p class="text-error">'+key+'</p></td><td align=center><p class="text-error">'+val.attn+'</p></td><td align=center><p class="text-error">'+val.total+'</p></td><td align=center><p class="text-error">'+val.percent+'%</p></td></tr>');
 }
 }
 
