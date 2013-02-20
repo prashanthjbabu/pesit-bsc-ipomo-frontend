@@ -4,6 +4,7 @@
 <script>
 function getattn() {
 var usn=document.getElementById("usn");
+alert(usn.value);
 $.getJSON('data.php?usn='+usn.value, function(data) {
   var items = [];
     var items2 = [];
