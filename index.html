@@ -6,6 +6,7 @@ $.getJSON('gentle-harbor-3367.herokuapp.com/?usn=1pe09cs059', function(data) {
   var items = [];
  
   $.each(data, function(key, val) {
+  alert("hi");
     items.push('<li id="' + key + '">' + val + '</li>');
   });
  
