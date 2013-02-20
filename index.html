@@ -13,13 +13,11 @@ else {
 }
 
   });
+   $("#result").text(items.join('')); 
  
-  $('<ul/>', {
-    'class': 'my-new-list',
-    html: items.join('')
-  }).appendTo('body');
 });	
 </script>
 <h1>PESIT BSC ONLINE ATTENDANCE</h1>
+<span id=result> </span>
 </body>
 </html>
