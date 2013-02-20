@@ -4,20 +4,24 @@
 <script>
 $.getJSON('data.php', function(data) {
   var items = [];
+    var items2 = [];
+  items.push('<table border=1>');
+  items.push('<tr><th>Subject</th><th>Attended></th><th>Total></th><th>Percentage></th></tr>');
   $.each(data, function(key, val) {
   if (val instanceof Object == false) {
-    items.push('<li id="' + key + '">'+key+'=' + val + '</li>');
+    items2.push('<b>'+key+'</b> : '+val+'<br>');
 }
 else {
-    items.push('<li id="' + key + '">'+key+'=' + val.total + '</li>');
+    items.push('<tr><td>'+key+'</td><td>'+val.attn+'</td><td>'+val.total+'</td><td>'+val.percent+'</td></tr>);
 }
 
   });
    $("#result").text(items.join('')); 
- 
+    $("#details").text(items2.join('')); 
 });	
 </script>
 <h1>PESIT BSC ONLINE ATTENDANCE</h1>
+<span id=details> </span>
 <span id=result> </span>
 </body>
 </html>
