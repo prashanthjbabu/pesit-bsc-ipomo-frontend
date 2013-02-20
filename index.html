@@ -5,7 +5,13 @@
 $.getJSON('data.php', function(data) {
   var items = [];
   $.each(data, function(key, val) {
+  if (val instanceof Object == false) {
     items.push('<li id="' + key + '">'+key+'=' + val + '</li>');
+}
+else {
+    items.push('<li id="' + key + '">'+key+'=' + val.total + '</li>');
+}
+
   });
  
   $('<ul/>', {
