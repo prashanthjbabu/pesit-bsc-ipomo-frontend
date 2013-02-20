@@ -4,6 +4,8 @@
 <script>
 function getattn() {
   $("#loading").show();
+   $("#result").html(""); 
+    $("#details").html(""); 
 var usn=document.getElementById("usn");
 $.getJSON('data.php?usn=1pe09cs059', function(data) {
   var items = [];
