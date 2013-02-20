@@ -13,7 +13,7 @@ $.getJSON('data.php?usn=1pe09cs059', function(data) {
   $.each(data, function(key, val) {
   if (val instanceof Object == false) {
     items2.push('<b>'+key+'</b> : '+val+'<br>');
-    alert(val);
+   
 }
 else {
     items.push('<tr><td>'+key+'</td><td>'+val.attn+'</td><td>'+val.total+'</td><td>'+val.percent+'</td></tr>');
@@ -28,7 +28,7 @@ else {
 <h1>PESIT BSC ONLINE ATTENDANCE</h1>
 <form>
 USN : <input type="text" name="usn" id="usn"><br>
-<input type="button" name="submit" id="submit" onclick="getattn()">
+<input type="button" value="GET ATTENDANCE"name="submit" id="submit" onclick="getattn()">
 </form>
 <span id=details> </span>
 <span id=result> </span>
