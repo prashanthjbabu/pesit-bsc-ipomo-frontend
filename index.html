@@ -33,7 +33,7 @@ $.getJSON('data.php?usn='+usn.value, function(data) {
 else {
 if(val.percent >= 85 )
 {
-    items.push('<tr><td align=center>'+key+'</td><td align=center>'+val.attn+'</td><td align=center>'+val.total+'</td><td align=center><p class="text-success">'+val.percent+'%</p></td></tr>');
+    items.push('<tr><td align=center><p class="text-success">'+key+'</p></td><td align=center><p class="text-success">'+val.attn+'</p></td><td align=center><p class="text-success">'+val.total+'</p></td><td align=center><p class="text-success">'+val.percent+'%</p></td></tr>');
 }
 else if(val.percent >=60 && val.percent <85)
 {
