@@ -2,7 +2,9 @@
 <body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script>
-$.getJSON('data.php', function(data) {
+function getattn() {
+var usn=document.getElementById("usn");
+$.getJSON('data.php?usn='+usn.value, function(data) {
   var items = [];
     var items2 = [];
   items.push('<table border=1>');
@@ -19,8 +21,13 @@ else {
    $("#result").html(items.join('')); 
     $("#details").html(items2.join('')); 
 });	
+}
 </script>
 <h1>PESIT BSC ONLINE ATTENDANCE</h1>
+<form>
+USN : <input type="text" name="usn" id="usn"><br>
+<input type="submit" name="submit" id="submit" onclick="getattn()">
+</form>
 <span id=details> </span>
 <span id=result> </span>
 </body>
