@@ -85,8 +85,14 @@ $(document).ready(function(){
 
 						<div id="content">
 
-						<form>
-						USN: <input type="text" placeholder="Enter USN Here" name="usn" id="usn"><br>
+						<form class="form-horizontal">
+						 <div class="control-group">
+						    <label class="control-label" for="usn">USN</label>
+						    <div class="controls">
+						<input type="text" placeholder="Enter USN Here" name="usn" id="usn">
+						    </div>
+						  </div>
+						
 						<input type="button" class="btn btn-primary" value="GET ATTENDANCE"name="submit" id="submit" onclick="getattn()">
 						</form>
 						<div id="loading" >
