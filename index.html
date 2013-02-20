@@ -63,20 +63,46 @@ $(document).ready(function(){
 				</div>
 			</div>
 		</div>
-      <h1>PESIT BSC ONLINE ATTENDANCE</h1>
-<form>
-USN: <input type="text"  name="usn" id="usn"><br>
-<input type="button" value="GET ATTENDANCE"name="submit" id="submit" onclick="getattn()">
-</form>
-<div id="loading" >
-    Fetching Your Attendance.. Please Wait....
-    <img src="ajax-loader.gif" alt="Loading" />
-</div>
-<span id=details> </span>
-<span id=result> </span>
- 
+		<div class = "row" style = "margin-top:1em;">
+		</div> 
+		<div class="container">			
+			<div class = "row-fluid">
+				<div class = "span12">
+
+					<div class="well well-large page-header">
+						<h1>
+							MinimalisticNote<small>&nbsp;Stay Connected! Always!</small>
+						</h1>
+						
+					</div>
+				</div>
+			</div>
+			<div class = "row-fluid">
+				<div class = "span12">
+					<div class="well well-large">
+						<h1>PESIT BSC ONLINE ATTENDANCE</h1>
+
+						<div id="content">
+
+						<form>
+						USN: <input type="text"  name="usn" id="usn"><br>
+						<input type="button" value="GET ATTENDANCE"name="submit" id="submit" onclick="getattn()">
+						</form>
+						<div id="loading" >
+						    Fetching Your Attendance.. Please Wait....
+						    <img src="ajax-loader.gif" alt="Loading" />
+						</div>
+						<span id=details> </span>
+						<span id=result> </span>
+						 
 
 
+						</div>
+					</div>
+				</div>
+				
+			</div>
+     
 
 </body>
 </html>
